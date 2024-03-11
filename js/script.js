@@ -10,6 +10,20 @@ let emails = [
     'sasha.politi@gmail.com'
 ]
 let elUserEmail = document.getElementById('userEmail');
+let elButton = document.querySelector('.btn.btn-primary');
+
+elButton.addEventListener('click', function() {
+    let email = elUserEmail.value;
+    const result = document.querySelector('.result');
+
+    for (let i = 0; i < emails.length; i++) {
+        if (email.toLowerCase() === emails[i].toLowerCase()) {
+            result.innerHTML = 'Accesso consentito.';
+        } else {
+            result.innerHTML = 'Accesso non consentito.';
+        }
+    }
+});
 
 
 // Gioco dei dadi
