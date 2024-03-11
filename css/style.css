@@ -1,0 +1,16 @@
+/* general */
+body {
+    background-color: #083B4C;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+/* main */
+h1 {
+    font-size: 4.8rem;
+    margin-bottom: 30px;
+}
+main section div.container {
+    max-width: 800px;
+}
