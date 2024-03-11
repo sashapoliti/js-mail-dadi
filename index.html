@@ -16,10 +16,10 @@
   </head>
   <body>
 
-    <main>
+    <main class="container d-flex ">
 
       <!-- first section mail -->
-      <section>
+      <section id="mail" class="container">
           <label for="userEmail" class="form-label">Indirizzo Email</label>
           <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="nome.cognome@gmail.com">
           <button class="btn btn-primary">Controllo</button>
@@ -30,9 +30,25 @@
       </section>
 
       <!-- second section dice -->
-      <section>
-        <button class="btn btn-secondary ">dadi</button>
-        <div class="versus"></div>
+      <section id="dice" class="container text-center ">
+        <div class="banner">
+          <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-las-vegas-sign_23-2149280197.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1710028800&semt=ais" alt="Las Vegas banner">
+        </div>
+        <div class="versus d-flex align-items-center ">
+          <div>
+            <h2>Dado Utente</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Question_mark_%28black%29.svg" alt="punto di domanda">
+          </div>
+          <div>
+            <img src="https://st4.depositphotos.com/1404656/30086/v/450/depositphotos_300867228-stock-illustration-versus-sign-black-and-white.jpg" alt="Versus">
+          </div>
+          <div>
+            <h2>Dado Computer</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Question_mark_%28black%29.svg" alt="punto di domanda">
+          </div>
+        </div>
+        <button class="btn btn-secondary "><i class="fa-solid fa-dice"></i> Gioca <i class="fa-solid fa-dice"></i></button>
+        <div class="result text-center "></div>
       </section>
     </main>
     <script src="js/utility.js" type="text/javascript"></script>

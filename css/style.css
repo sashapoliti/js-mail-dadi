@@ -1,16 +1,27 @@
 /* general */
 body {
-    background-color: #083B4C;
-    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     font-weight: 500;
     font-size: 1em;
 }
+img {
+    width: 100%;
+}
 
 /* main */
-h1 {
-    font-size: 4.8rem;
-    margin-bottom: 30px;
+#mail {
+    width: 30%;
+    margin-right: 20px;
 }
-main section div.container {
-    max-width: 800px;
+div.banner {
+    width: 250px;
+    margin: 0 auto;
+}
+div.versus>div:first-child,
+div.versus>div:last-child {
+    width: 35%;
+}
+div.versus>div:nth-child(2) {
+    width: 30%;
 }

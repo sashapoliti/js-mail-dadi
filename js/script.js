@@ -34,17 +34,22 @@ let button = document.querySelector('.btn.btn-secondary'); //button to start
 
 button.addEventListener('click', function() {
     let dice = [1, 2, 3, 4, 5, 6]; //normal dice
-    const versus = document.querySelector('.versus');
+    const versus = document.querySelector('#dice .result');
     let userPosition = getRndInteger(0, dice.length - 1);
     let userNumber = dice[userPosition];
+    const userImg = document.querySelector('div.versus>div:first-child img');
+    userImg.setAttribute('src', `dadi/${userNumber}.svg`);
+    userImg.setAttribute('alt', `Dado numero ${userNumber}`);
 
     dice.splice(userPosition, 1); //remove possibility of the first number
 
     let pcPosition = getRndInteger(0, dice.length - 2);
     let pcNumber = dice[pcPosition];
+    const pcImg = document.querySelector('div.versus>div:last-child img');
+    pcImg.setAttribute('src', `dadi/${pcNumber}.svg`);
+    pcImg.setAttribute('alt', `Dado numero ${pcNumber}`);
 
-    console.log(userNumber);
-    console.log(pcNumber);
+    
     if (userNumber > pcNumber) {
         versus.innerHTML = 'Hai vinto!';
     } else {
