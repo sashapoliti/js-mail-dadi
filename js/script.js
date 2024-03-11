@@ -30,11 +30,24 @@ elButton.addEventListener('click', function() {
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-let dice = [1, 2, 3, 4, 5, 6];
-let button = document.querySelector('.btn.btn-secondary');
+let button = document.querySelector('.btn.btn-secondary'); //button to start
 
 button.addEventListener('click', function() {
-    let userPosition = getRndInteger(0, 5);
+    let dice = [1, 2, 3, 4, 5, 6]; //normal dice
+    const versus = document.querySelector('.versus');
+    let userPosition = getRndInteger(0, dice.length - 1);
     let userNumber = dice[userPosition];
+
+    dice.splice(userPosition, 1); //remove possibility of the first number
+
+    let pcPosition = getRndInteger(0, dice.length - 2);
+    let pcNumber = dice[pcPosition];
+
     console.log(userNumber);
+    console.log(pcNumber);
+    if (userNumber > pcNumber) {
+        versus.innerHTML = 'Hai vinto!';
+    } else {
+        versus.innerHTML = 'Hai perso...';
+    }
 });
