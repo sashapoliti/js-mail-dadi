@@ -10,7 +10,7 @@ let emails = [
     'sasha.politi@gmail.com'
 ]
 let elUserEmail = document.getElementById('userEmail');
-let elButton = document.querySelector('.btn.btn-primary');
+let elButton = document.querySelector('.btn.btn-outline-success');
 
 elButton.addEventListener('click', function() {
     let email = elUserEmail.value;

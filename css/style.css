@@ -12,7 +12,14 @@ img {
 /* main */
 #mail {
     width: 30%;
-    margin-right: 20px;
+    margin-right: 100px;
+}
+section#mail>div {
+    color: #0A3B0A;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 div.banner {
     width: 250px;
